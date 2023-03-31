@@ -15,12 +15,6 @@
 ::-webkit-scrollbar {
   display: none;
 }
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.example {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
 body {
   background-color: var(--green);
 }
@@ -29,7 +23,6 @@ main {
   margin-top: 2em;
 }
 main h1 {
-  /* background-color: red; */
   text-align: center;
   color: var(--yellow);
   font-size: 3rem;
@@ -41,7 +34,6 @@ main h2 {
   font-size: 1.5rem;
   font-weight: 300;
   text-shadow: 2px 2px rgb(187, 185, 185);
-  /* box-shadow: 1px 1px black; */
 }
 #inputSearch {
   margin-top: 30px;
@@ -55,7 +47,6 @@ main h2 {
   height: 100%;
   width: 80%;
   outline: none;
-  /* border: 3px solid var(--oren); */
   background-color: var(--yellow);
   padding-left: 30px;
   font-weight: 500;
@@ -68,10 +59,9 @@ main h2 {
   font-weight: 500;
   font-size: 1rem;
 }
-#container {
+meal-list {
   padding: 5px;
   margin-top: 30px;
-  /* background-color: yellow; */
   width: 100%;
   height: 60vh;
   display: flex;
@@ -81,8 +71,7 @@ main h2 {
   overflow-y: auto;
   overflow-wrap: break-word;
 }
-
-.item {
+meal-item {
   width: 180px;
   height: 220px;
   background-color: var(--lightGreen);
@@ -90,21 +79,19 @@ main h2 {
   padding-top: 15px;
   border-radius: 15px;
   overflow-y: hidden;
-  /* border-top-left-radius: 35px; */
   border-top-right-radius: 15px;
 }
-.item:hover {
+meal-item:hover {
   transform: scale(1.05);
   transition: 0.3s ease;
   cursor: pointer;
 }
-.item .img {
+meal-item .img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: white;
   width: 80%;
   height: 140px;
-  /* margin-top: 20px; */
   margin: 0 auto;
 }
 .img img {
@@ -112,20 +99,16 @@ main h2 {
   background-position: center;
   background-size: cover;
 }
-.item h3 {
+meal-item h3 {
   margin: 0 auto;
   margin-top: 10px;
   width: 80%;
   height: 50px;
-  /* background-color: green; */
   word-wrap: break-word;
   text-align: center;
-  /* margin: 0 auto; */
   color: var(--dark);
-  /* text-overflow: ellipsis; */
   overflow-y: hidden;
 }
-
 .overflow {
   background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -147,11 +130,9 @@ main h2 {
   padding-right: 50px;
 }
 .popUp .content {
-  /* background-color: yellow; */
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  /* border-top-right-radius: 100px; */
 }
 .closeButton {
   position: absolute;
@@ -160,7 +141,6 @@ main h2 {
   cursor: pointer;
   width: 35px;
   height: 35px;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,15 +159,11 @@ main h2 {
   transform: rotate(135deg) translateX(-3px) translateY(1px);
 }
 .closeButton:hover {
-  /* transform: scale(1.05); */
   background-color: #e8dcbe;
 }
 .row-1 {
-  /* background-color: red; */
   width: 100%;
   display: flex;
-  /* height: 200px; */
-  /* gap: 15px; */
 }
 .row-1 .img {
   flex: 0;
@@ -197,23 +173,17 @@ main h2 {
 }
 .row-1 .details {
   padding-left: 30px;
-  /* background-color: bisque; */
   flex: 1 1 70%;
 }
 .mealName {
   display: inline;
   color: var(--dark);
   padding-bottom: 5px;
-  /* border-bottom: 4px solid var(--dark); */
   text-shadow: 0px 1px rgba(110, 108, 108, 0.525);
-  /* background-color: blue; */
   width: 100px;
 }
 table {
   margin-top: 20px;
-}
-tr {
-  /* margin-top: 30px; */
 }
 td {
   color: var(--dark);
@@ -230,7 +200,6 @@ td:first-child {
   padding-top: 25px;
   width: 100%;
   height: 300px;
-  /* background-color: aqua; */
 }
 .row-2 h2 {
   font-size: 1.2rem;
@@ -254,6 +223,7 @@ td:first-child {
   }
   .row-1 {
     flex-direction: column;
+    gap: 30px;
   }
   .row-1 .details {
     padding: 0;
